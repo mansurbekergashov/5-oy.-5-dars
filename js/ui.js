@@ -27,7 +27,7 @@ export function ui(cars) {
         elDescription.innerText = car.description;
         elCountry.innerText = car.country;
         elCategory.innerText = car.category;
-        elColor.innerText = car.color;
+        elColor.innerText = car.colorName;
         elColorBadge.style.backgroundColor = car.color;
 
 
