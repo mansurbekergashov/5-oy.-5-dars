@@ -17,9 +17,9 @@ export function ui(cars) {
 
 
         // ID
+        elInfo.href = `pages/details.html?id=${car.id}`;
         elDelete.id = car.id;
         elEdit.id = car.id;
-        elInfo.id = car.id;
 
 
         // CONTENT
