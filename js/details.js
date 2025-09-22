@@ -61,7 +61,13 @@ function displayDetails(carData) {
 }
 
 
+
+
 init()
+
+
+
+
 
 
 

@@ -6,6 +6,10 @@ const elCardSkeletonTemplate = document.getElementById("cardSkeletonTemplate");
 const elCardContainer = document.getElementById("cardContainer");
 const elLoginLogoutBtn = document.getElementById("loginLogoutBtn");
 const elModalLoginButton = document.getElementById("modalLoginButton");
+const elCountrySelect = document.getElementById("countrySelect")
+const elCategorySelect = document.getElementById("categorySelect")
+const elColorSelect = document.getElementById("colorSelect")
+const elFuelTypeSelect = document.getElementById("fuelTypeSelect")
 
 // ELEMENTS DETAILS
 const elDetailsWrapper = document.getElementById("detailsWrapper")
@@ -37,6 +41,9 @@ const elCardLoaders = document.getElementById("cardLoaders");
 // MODAL
 const elInfoModal = document.getElementById("infoModal");
 
+// FILTER
+// const elColorFilter = document.getElementById("colorFilter")
+// const elPriceFilter = document.getElementById("priceFilter")
 
 
 export {
@@ -68,4 +75,8 @@ export {
     elDetailsCombined,
     elDetailsWrapper,
     elDetailsLoading,
+    elCountrySelect,
+    elCategorySelect,
+    elColorSelect,
+    elFuelTypeSelect,
 }
