@@ -57,10 +57,7 @@ function displayDetails(carData) {
     elDetailsCity.innerText = carData?.fuelConsumption?.city;
     elDetailsHighway.innerText = carData?.fuelConsumption?.highway;
     elDetailsCombined.innerText = carData?.fuelConsumption?.combined;
-
 }
-
-
 
 
 init()

@@ -10,6 +10,11 @@ const elCountrySelect = document.getElementById("countrySelect")
 const elCategorySelect = document.getElementById("categorySelect")
 const elColorSelect = document.getElementById("colorSelect")
 const elFuelTypeSelect = document.getElementById("fuelTypeSelect")
+const elFilterType = document.getElementById("filterType")
+const elFilterLoader = document.getElementById("filterLoader")
+const elFilterZone = document.getElementById("filterZone")
+const elFilterSelectValue = document.getElementById("filterSelectValue")
+const elClearButton = document.getElementById("clearButton")
 
 // ELEMENTS DETAILS
 const elDetailsWrapper = document.getElementById("detailsWrapper")
@@ -34,16 +39,17 @@ const elDetailsCity = document.getElementById("detailsCity")
 const elDetailsHighway = document.getElementById("detailsHighway")
 const elDetailsCombined = document.getElementById("detailsCombined")
 
+// LOGIN ELEMENTS
+const elLoginForm = document.getElementById("form")
+
 
 // LOADER
 const elCardLoaders = document.getElementById("cardLoaders");
 
 // MODAL
 const elInfoModal = document.getElementById("infoModal");
+// const elDeleteModal = document.getElementById("deleteModal");
 
-// FILTER
-// const elColorFilter = document.getElementById("colorFilter")
-// const elPriceFilter = document.getElementById("priceFilter")
 
 
 export {
@@ -79,4 +85,11 @@ export {
     elCategorySelect,
     elColorSelect,
     elFuelTypeSelect,
+    elFilterType,
+    elFilterLoader,
+    elFilterZone,
+    elFilterSelectValue,
+    elClearButton,
+    elLoginForm,
+    // elDeleteModal
 }

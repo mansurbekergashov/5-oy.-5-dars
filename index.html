@@ -21,78 +21,32 @@
       </div>
     </header>
 
-
-    <!-- FILTERS -->
-    <div class="flex gap-6 text-center justify-center">
-      <div class="flex flex-col mt-2 ml-10">
-        <label for="countrySelect" class="text-[16px]">Mamlakat</label>
-          <select class="select w-36 h-8 mt-1" id="countrySelect">
-            <option value="all" selected>Hammasi</option>
-            <option value="yaponiya">Yaponiya</option>
-            <option value="aqsh">AQSh</option>
-            <option value="germaniya">Germaniya</option>
-            <option value="koreya">Koreya</option>
-            <option value="shvetsiya">Shvetsiya</option>
-            <option value="buyuk Britaniya">Buyuk Britaniya</option>
-            <option value="fransiya">Fransiya</option>
-            <option value="chexiya">Chexiya</option>
-          </select>
-      </div>
-      <div class="flex flex-col mt-2 ml-10">
-        <label for="countrySelect" class="text-[16px]">Turkum</label>
-          <select class="select w-36 h-8 mt-1" id="categorySelect">
-            <option value="all" selected>Hammasi</option>
-            <option value="universal">Universal</option>
-            <option value="sedan">Sedan</option>
-            <option value="suv">SUV</option>
-            <option value="krossover">Krossover</option>
-            <option value="off-road">Off-road</option>
-            <option value="kupe">Kupe</option>
-            <option value="pikap">Pikap</option>
-          </select>
-      </div>
-      <div class="flex flex-col mt-2 ml-10">
-        <label for="countrySelect" class="text-[16px]">Rang</label>
-          <select class="select w-36 h-8 mt-1" id="colorSelect">
-            <option value="all" selected>Hammasi</option>
-            <option value="polat ko'k">Po'lat ko'k</option>
-            <option value="qora">Qora</option>
-            <option value="kumush">Kumush</option>
-            <option value="oltin">Oltin</option>
-            <option value="baliq">Baliq qizil</option>
-            <option value="dengiz">Dengiz ko'k</option>
-            <option value="qizil">Qizil</option>
-            <option value="oq">Oq</option>
-            <option value="kulrang">Kulrang</option>
-            <option value="jigarrang">Jigarrang</option>
-            <option value="to'q kulrang">To'q kulrang</option>
-            <option value="binafsha">Binafsha</option>
-            <option value="yashil">Yashil</option>
-            <option value="orange">Orange</option>
-            <option value="to'q sariq">To'q sariq</option>
-            <option value="lavanta">Lavanta</option>
-            <option value="bordo">Bordo</option>
-            <option value="moviy">Moviy</option>
-            <option value="qizil orange">Qizil-orange</option>
-            <option value="to'q ko'k">To'q ko'k</option>
-            <option value="dark slate">Dark slate</option>
-          </select>
-      </div>
-      <div class="flex flex-col mt-2 ml-10">
-        <label for="countrySelect" class="text-[16px]">Yoqilg'i turi</label>
-          <select class="select w-36 h-8 mt-1" id="fuelTypeSelect">
-            <option value="all" selected>Hammasi</option>
-            <option value="benzin">Benzin</option>
-            <option value="elektrik">Elektrik</option>
-          </select>
-      </div>
-    </div>
     
     <!-- MAIN -->
     <main>
+      <!-- FILTER -->
+      <section class="py-5">
+        <div class="container mx-auto px-5 flex gap-5" id="filterZone">
+          <select class="select" id="filterType">
+            <option disabled selected>Nima bo'yicha filter qilasiz?</option>
+            <option value="country">Davlat</option>
+            <option value="category">Turkum</option>
+            <option value="colorName">Rang</option>
+          </select>
+          <select class="select hidden" id="filterSelectValue">
+            <option disabled selected>All</option>
+          </select>
+          <button class="btn btn-neutral" id="clearButton"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.36052 0.72921C8.55578 0.533948 8.87236 0.533948 9.06763 0.72921L14.2708 5.93235C14.466 6.12761 14.466 6.4442 14.2708 6.63946L8.95513 11.9551L7.3466 13.5636C6.76081 14.1494 5.81106 14.1494 5.22528 13.5636L1.43635 9.7747C0.850563 9.18891 0.850563 8.23917 1.43635 7.65338L3.04488 6.04485L8.36052 0.72921ZM8.71407 1.78987L4.10554 6.3984L8.60157 10.8944L13.2101 6.28591L8.71407 1.78987ZM7.89447 11.6015L3.39843 7.10551L2.14346 8.36049C1.94819 8.55575 1.94819 8.87233 2.14346 9.06759L5.93238 12.8565C6.12765 13.0518 6.44423 13.0518 6.63949 12.8565L7.89447 11.6015Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>Tozalash</button>
+        </div>
+
+        <div class="flex gap-5 container mx-auto px-5" id="filterLoader">
+          <div class="skeleton h-10 w-[320px]"></div>
+          <div class="skeleton h-10 w-[120px]"></div>
+        </div>
+      </section>
       <section>
         <div class="container mx-auto px-5">
-          <ul class="grid grid-cols-3 gap-3 mt-6" id="cardContainer"></ul>
+          <ul class="grid grid-cols-3 gap-3" id="cardContainer"></ul>
         </div>
       </section>
     </main>
@@ -116,6 +70,21 @@
           </div>
       </div>
     </dialog>
+    
+    <!-- DELETE MODAL -->
+    <!-- <dialog id="deleteModal" class="modal">
+      <div class="modal-box">
+          <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          </form>
+          <h3 class="text-lg font-bold">O'chirish</h3>
+          <p class="py-4">Ushbu elementni chindan ham o'chirmoqchimisiz</p>
+          <div class="flex justify-end gap-4">
+            <button class="btn btn-outline" id="deleteNoButton">Yo'q</button>
+            <button class="btn btn-neutral" id="deleteYesButton">Ha</button>
+          </div>
+      </div>
+    </dialog> -->
 
 
     <!-- TEMPLATES -->
