@@ -61,7 +61,7 @@ elRegisterForm.addEventListener("submit", (e) => {
     const check = validation(result);
 
     if (check) {
-        elLoginForm[check.target].focus();
+        elRegisterForm[check.target].focus();
         const p = document.createElement("p");
         p.innerText = check.message;
         p.style.cssText = `
