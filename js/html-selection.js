@@ -41,6 +41,7 @@ const elDetailsCombined = document.getElementById("detailsCombined")
 
 // LOGIN ELEMENTS
 const elLoginForm = document.getElementById("form")
+const elRegisterForm = document.getElementById("formReg")
 
 
 // LOADER
@@ -91,5 +92,6 @@ export {
     elFilterSelectValue,
     elClearButton,
     elLoginForm,
+    elRegisterForm,
     // elDeleteModal
 }

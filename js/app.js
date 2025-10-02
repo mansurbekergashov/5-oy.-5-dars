@@ -112,7 +112,7 @@ elLoginLogoutBtn.addEventListener("click", () => {
 });
 
 elModalLoginButton.addEventListener("click", () => {
-    location.href = "/pages/login.html";
+    location.href = "/pages/register.html";
 
 })
 
