@@ -107,7 +107,6 @@ elLoginLogoutBtn.addEventListener("click", () => {
         location.href = "/pages/register.html"
     }
 
-    location.reload();
 
 });
 
